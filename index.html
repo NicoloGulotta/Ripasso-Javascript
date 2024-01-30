@@ -1,13 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ripaso Javascript</title>
 </head>
+
 <body>
+    <h1 id="parola">Nicolò Gulotta !</h1>
     <Script>
 
-    </Script>
+
+        //1° esercizio
+        let a, b;
+        a = 49;
+        b = 1;
+        function verifNum(n1, n2) {
+            if (n1 == 50) {
+                console.log(true);
+            }
+            else if (n2 == 50) {
+                console.log(true);
+            }
+            else if (n1 + n2 == 50) {
+                console.log(true);
+            }
+            else {
+                console.log(false);
+            }
+        }
+        verifNum(a, b)
+
+
+
+        //2° esercizio
+        function removeLast(str) {
+            const testo = document.getElementById("parola").innerText;
+            remover = testo.slice(0, -1);
+            console.log(remover);
+        }
+        removeLast()
+
+        //3° eserczio
+
+
+
+        //4° esercizio
+        function verificaNome(nomeCittà) {
+            const testo = document.getElementById("parola");
+            let testoValue = testo.innerText.toLowerCase();
+            if (testoValue.includes('los')) {
+                console.log(true);
+            }
+            else if (testoValue.includes('new')) {
+                console.log(true)
+            }
+            else console.log(false);
+        }
+        verificaNome()
+
+
+        //5° esercizio
+        // Con Dati Fissi
+        let ArreyFisso = ["a", "b", "c", "d", "e", "f"]
+        let somma = 0;
+        for (let i = 0; i < ArreyFisso.length; i++) {
+            somma = somma + ArreyFisso[i]
+        }
+        console.log(somma)
+
+
+        //Con Numeri Random
+        let ArreyRandom = []
+        const NumElem = 5;
+        let max = 10;
+        for (let i = 0; i < NumElem; i++) {
+            ArreyRandom.push(Math.floor(Math.random() * max))
+        }
+        let addizione = 0;
+        ArreyRandom.forEach(numero => {
+            addizione = addizione + numero
+        })
+        console.log(addizione);
+
+        //6° esercizio 
+        let ArreyNum = [4, 0]
+        function verificaNum(num) {
+
+            for (let index = 0; index < num.length; index++) {
+                if (num.includes(1) && (num.includes(3))) {
+                    console.log(false);
+                }
+                else console.log(true);
+            }
+        } verificaNum(ArreyNum)
+
+        //7° esercizio
+
+
+    </script>
 </body>
+
 </html>
